@@ -9,7 +9,7 @@ body {
 
 h1 {
     text-align: center;
-    color: lightblue; /* Keep this change */
+    color: lightblue;
     margin-top: 20px;
 }
 
@@ -23,18 +23,17 @@ h1 {
 }
 
 .countdown {
-    display: flex;
-    flex-direction: column; /* Changed to column for mobile */
-    align-items: center; /* Center items */
+    display: grid; /* Change to grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 10px; /* Space between items */
     margin-top: 20px;
 }
 
 .countdown-item {
     text-align: center;
     background: #fff;
-    padding: 15px;
-    width: 100px; /* Ensures uniform width */
-    height: 100px; /* Ensures uniform height */
+    padding: 10px;
+    height: 80px; /* Uniform height */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,26 +43,21 @@ h1 {
 }
 
 .number {
-    font-size: 36px;
+    font-size: 24px; /* Smaller font size for mobile */
     color: #333;
     margin: 0;
 }
 
 .label {
-    font-size: 16px; /* Increased by about 15% */
+    font-size: 14px; /* Slightly smaller label font */
     margin-bottom: 5px;
     color: #555;
 }
 
 footer {
     text-align: center;
-    padding: 10px; /* Reduced padding for more space */
+    padding: 15px;
     background-color: #e6f7ff;
     color: #555;
     border-top: 1px solid #ddd;
-    position: fixed; /* Fixes the footer to the bottom */
-    left: 0; /* Aligns to the left */
-    right: 0; /* Aligns to the right */
-    bottom: 0; /* Aligns to the bottom */
-    z-index: 10; /* Ensures it stays above other content */
 }
